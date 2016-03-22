@@ -8,10 +8,10 @@ jdk:
 
 build:
   pre_ci:
-    - docker build -t=gcr.io/gcr_project_id/hitchcock3_sample_java .
+    - docker build -t=gcr.io/vidya-project/hitchcock3_sample_java .
 
   pre_ci_boot:
-    image_name: gcr.io/gcr_project_id/hitchcock3_sample_java
+    image_name: gcr.io/vidya-project/hitchcock3_sample_java
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -21,7 +21,7 @@ build:
     - ls -al
 
   post_ci:
-    - docker push gcr.io/gcr_project_id/hitchcock3_sample_java
+    - docker push gcr.io/vidya-project/hitchcock3_sample_java
 
 integrations:
   hub:
