@@ -21,8 +21,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=gcr.io/gcr_project_id/hitchcock3_sample_java .
-    - docker push gcr.io/gcr_project_id/hitchcock3_sample_java
+    - docker build -t=gcr.io/vidya-project/hitchcock31 .
+    - docker push gcr.io/vidya-project/hitchcock31
 
 integrations:
   hub:
